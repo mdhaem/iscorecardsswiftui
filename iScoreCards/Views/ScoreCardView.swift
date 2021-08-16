@@ -44,7 +44,7 @@ struct ScoreCardView: View {
             get: { String(format: "%.0f", $cardsManager.scores[column][row] as! CVarArg) },
             set: {
                 if let value = NumberFormatter().number(from: $0) {
-                    column.append(cardsManager.scores[column][row] = Int(value.int32Value))
+                    //column.append(cardsManager.scores[column][row] = Int(value.int32Value))
                 }
             }
         )
