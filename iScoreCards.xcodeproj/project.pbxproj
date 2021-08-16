@@ -3,16 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3503F748266D2C5200F0FDE5 /* ScoreCardPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3503F747266D2C5200F0FDE5 /* ScoreCardPlayersView.swift */; };
+		3503F74A266D2C8900F0FDE5 /* ScoreCardTotalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3503F749266D2C8900F0FDE5 /* ScoreCardTotalsView.swift */; };
 		352475E92653F7B300D61178 /* iScoreCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352475E82653F7B300D61178 /* iScoreCardsApp.swift */; };
-		352475EB2653F7B300D61178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352475EA2653F7B300D61178 /* ContentView.swift */; };
+		352475EB2653F7B300D61178 /* iScoreCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352475EA2653F7B300D61178 /* iScoreCardsView.swift */; };
 		352475ED2653F7B300D61178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352475EC2653F7B300D61178 /* Assets.xcassets */; };
 		352475F02653F7B300D61178 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352475EF2653F7B300D61178 /* Preview Assets.xcassets */; };
 		352475FB2653F7B300D61178 /* iScoreCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352475FA2653F7B300D61178 /* iScoreCardsTests.swift */; };
 		352476062653F7B300D61178 /* iScoreCardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352476052653F7B300D61178 /* iScoreCardsUITests.swift */; };
+		35247617265402FE00D61178 /* UnregisteredGameSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35247616265402FE00D61178 /* UnregisteredGameSetupView.swift */; };
+		352476192654031100D61178 /* SecondTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352476182654031100D61178 /* SecondTabView.swift */; };
+		3524761B26540F4900D61178 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3524761A26540F4900D61178 /* HomeTabView.swift */; };
+		3524761D2655606D00D61178 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3524761C2655606D00D61178 /* Game.swift */; };
+		352476212658B38C00D61178 /* CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352476202658B38C00D61178 /* CardsManager.swift */; };
+		3524762426594C4B00D61178 /* ScoreCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3524762326594C4B00D61178 /* ScoreCardView.swift */; };
+		3571226626839178006419FD /* URLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571226526839178006419FD /* URLTextField.swift */; };
+		357122692683968F006419FD /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 357122682683968F006419FD /* Introspect */; };
+		35B2DEDB2697585700A815CB /* ScoreCardRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B2DEDA2697585700A815CB /* ScoreCardRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3503F747266D2C5200F0FDE5 /* ScoreCardPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardPlayersView.swift; sourceTree = "<group>"; };
+		3503F749266D2C8900F0FDE5 /* ScoreCardTotalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardTotalsView.swift; sourceTree = "<group>"; };
 		352475E52653F7B300D61178 /* iScoreCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iScoreCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		352475E82653F7B300D61178 /* iScoreCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iScoreCardsApp.swift; sourceTree = "<group>"; };
-		352475EA2653F7B300D61178 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		352475EA2653F7B300D61178 /* iScoreCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iScoreCardsView.swift; sourceTree = "<group>"; };
 		352475EC2653F7B300D61178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		352475EF2653F7B300D61178 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		352475F12653F7B300D61178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +58,14 @@
 		352476012653F7B300D61178 /* iScoreCardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iScoreCardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		352476052653F7B300D61178 /* iScoreCardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iScoreCardsUITests.swift; sourceTree = "<group>"; };
 		352476072653F7B300D61178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35247616265402FE00D61178 /* UnregisteredGameSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnregisteredGameSetupView.swift; sourceTree = "<group>"; };
+		352476182654031100D61178 /* SecondTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabView.swift; sourceTree = "<group>"; };
+		3524761A26540F4900D61178 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		3524761C2655606D00D61178 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		352476202658B38C00D61178 /* CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsManager.swift; sourceTree = "<group>"; };
+		3524762326594C4B00D61178 /* ScoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardView.swift; sourceTree = "<group>"; };
+		3571226526839178006419FD /* URLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTextField.swift; sourceTree = "<group>"; };
+		35B2DEDA2697585700A815CB /* ScoreCardRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				357122692683968F006419FD /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				352475E82653F7B300D61178 /* iScoreCardsApp.swift */,
-				352475EA2653F7B300D61178 /* ContentView.swift */,
+				352476152653F83200D61178 /* ViewModels */,
+				352476142653F81500D61178 /* Models */,
+				352476132653F7FC00D61178 /* Views */,
 				352475EC2653F7B300D61178 /* Assets.xcassets */,
 				352475F12653F7B300D61178 /* Info.plist */,
 				352475EE2653F7B300D61178 /* Preview Content */,
@@ -130,6 +154,46 @@
 			path = iScoreCardsUITests;
 			sourceTree = "<group>";
 		};
+		352476132653F7FC00D61178 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				352475EA2653F7B300D61178 /* iScoreCardsView.swift */,
+				3524761A26540F4900D61178 /* HomeTabView.swift */,
+				35247616265402FE00D61178 /* UnregisteredGameSetupView.swift */,
+				352476182654031100D61178 /* SecondTabView.swift */,
+				3524762226594C0100D61178 /* ScoreCardViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		352476142653F81500D61178 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3524761C2655606D00D61178 /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		352476152653F83200D61178 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				352476202658B38C00D61178 /* CardsManager.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3524762226594C0100D61178 /* ScoreCardViews */ = {
+			isa = PBXGroup;
+			children = (
+				3524762326594C4B00D61178 /* ScoreCardView.swift */,
+				3503F747266D2C5200F0FDE5 /* ScoreCardPlayersView.swift */,
+				3503F749266D2C8900F0FDE5 /* ScoreCardTotalsView.swift */,
+				3571226526839178006419FD /* URLTextField.swift */,
+				35B2DEDA2697585700A815CB /* ScoreCardRowView.swift */,
+			);
+			name = ScoreCardViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +210,9 @@
 			dependencies = (
 			);
 			name = iScoreCards;
+			packageProductDependencies = (
+				357122682683968F006419FD /* Introspect */,
+			);
 			productName = iScoreCards;
 			productReference = 352475E52653F7B300D61178 /* iScoreCards.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +284,9 @@
 				Base,
 			);
 			mainGroup = 352475DC2653F7B200D61178;
+			packageReferences = (
+				357122672683968F006419FD /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = 352475E62653F7B300D61178 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +329,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				352475EB2653F7B300D61178 /* ContentView.swift in Sources */,
+				352476192654031100D61178 /* SecondTabView.swift in Sources */,
+				3524761D2655606D00D61178 /* Game.swift in Sources */,
+				352475EB2653F7B300D61178 /* iScoreCardsView.swift in Sources */,
+				3524761B26540F4900D61178 /* HomeTabView.swift in Sources */,
+				3503F74A266D2C8900F0FDE5 /* ScoreCardTotalsView.swift in Sources */,
+				3571226626839178006419FD /* URLTextField.swift in Sources */,
+				35B2DEDB2697585700A815CB /* ScoreCardRowView.swift in Sources */,
+				352476212658B38C00D61178 /* CardsManager.swift in Sources */,
+				35247617265402FE00D61178 /* UnregisteredGameSetupView.swift in Sources */,
 				352475E92653F7B300D61178 /* iScoreCardsApp.swift in Sources */,
+				3524762426594C4B00D61178 /* ScoreCardView.swift in Sources */,
+				3503F748266D2C5200F0FDE5 /* ScoreCardPlayersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +660,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		357122672683968F006419FD /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		357122682683968F006419FD /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 357122672683968F006419FD /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 352475DD2653F7B200D61178 /* Project object */;
 }

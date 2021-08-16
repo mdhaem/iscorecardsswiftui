@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct iScoreCardsApp: App {
+    @State var score: [[Int]] = [[0,0,0,0], [0,0,0,0], [0,0,0,0], [0,0,0,0]]
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            iScoreCardsView(cardsManager: CardsManager(name: "", hands: "", team: "", scores: score, scoreCardTotals: [0,0,0,0]))
         }
     }
 }
