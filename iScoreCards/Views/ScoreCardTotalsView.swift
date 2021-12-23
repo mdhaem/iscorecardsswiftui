@@ -17,7 +17,7 @@ struct ScoreCardTotalsView: View {
                     "0",
                     //text: $cardsManager.scoreTotals[column]
                     value: $cardsManager.scoreTotals[column],
-                    formatter: ScoreCardView.integer
+                    formatter: ScoreCardRowView.integer
                 )
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(EdgeInsets(top: 0, leading: 22, bottom: 0, trailing: 0))
@@ -27,10 +27,10 @@ struct ScoreCardTotalsView: View {
     }
 }
 
-//struct ScoreCardTotalsView_Previews: PreviewProvider {
-//    static var cardsManager = CardsManager(name: "Test", hands: "8", team: "1,2,3,4", score: [[0,0,0,0], [0,0,0,0],[0,0,0,0], [0,0,0,0]], scoreCardTotals: ["0","0","0","0"])
-//    
-//    static var previews: some View {
-//        ScoreCardTotalsView(cardsManager: cardsManager)
-//    }
-//}
+struct ScoreCardTotalsView_Previews: PreviewProvider {
+    static var cardsManager = CardsManager(name: "Test", hands: "8", team: "1,2,3,4", scores: [[0,0,0,0], [0,0,0,0],[0,0,0,0], [0,0,0,0]], scoreCardTotals: [0,0,0,0])
+    
+    static var previews: some View {
+        ScoreCardTotalsView(cardsManager: cardsManager)
+    }
+}

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SecondTabView: View {
     var body: some View {
-        Text("SecondTabView")
+        //Text("SecondTabView")
+        TextFieldHighlightView()
     }
 }
 

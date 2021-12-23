@@ -16,10 +16,10 @@ struct iScoreCardsView: View {
                 .tabItem { Label( "Home", systemImage: "house.circle") }
                 .tag(1)
             UnregisteredGameSetupView(cardsManager: cardsManager)
-                .tabItem { Label( "Play", systemImage: "play.circle") }
+                .tabItem { Label( "Unregister Play", systemImage: "rectangle.stack.person.crop") }
                 .tag(2)
             SecondTabView()
-                .tabItem { Label( "Register/Login", systemImage: "person.fill.questionmark")}
+                .tabItem { Label( "Register Play/Login", systemImage: "rectangle.stack.person.crop.fill")}
                 .tag(3)
         }
     }

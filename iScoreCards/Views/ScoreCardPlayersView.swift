@@ -23,10 +23,10 @@ struct ScoreCardPlayersView: View {
     }
 }
 
-//struct ScoreCardPlayersView_Previews: PreviewProvider {
-//    static var cardsManager = CardsManager(name: "Test", hands: "8", team: "Bill,Bev,Mike,Sandy", score: [["0","0","0","0"], ["0","0","0","0"],["0","0","0","0"], ["0","0","0","0"]], scoreCardTotals: ["0","0","0","0"])
-//    
-//    static var previews: some View {
-//        ScoreCardPlayersView(cardsManager: cardsManager)
-//    }
-//}
+struct ScoreCardPlayersView_Previews: PreviewProvider {
+    static var cardsManager = CardsManager(name: "Test", hands: "8", team: "Bill,Bev,Mike,Sandy", scores: [[0,0,0,0], [0,0,0,0],[0,0,0,0], [0,0,0,0]], scoreCardTotals: [0,0,0,0])
+    
+    static var previews: some View {
+        ScoreCardPlayersView(cardsManager: cardsManager)
+    }
+}

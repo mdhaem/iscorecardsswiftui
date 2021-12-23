@@ -23,7 +23,7 @@ class CardsManager: ObservableObject {
     }
     
     func teamCount() -> Int {
-        return self.team.components(separatedBy: ",").count
+        return (self.team.components(separatedBy: ",").count)
     }
     
     func players() -> [String] {
@@ -31,10 +31,11 @@ class CardsManager: ObservableObject {
     }
     
     func handsCount() -> Int {
-        return Int(self.hands) ?? 8
+     return Int(self.hands)!// ?? 8
     }
     
     func scoreCard() -> [[Int]] {
+        //print("teamCount/handsCount", teamCount(), handsCount())
         return Array(repeating: Array(repeating: 0, count: teamCount()), count: handsCount())
     }
     
@@ -51,11 +52,18 @@ class CardsManager: ObservableObject {
         self.scoreTotals = self.scoreCardTotals()
     }
     
-    func totalScores(value: Int, row: Int, column: Int) {
-        print("\(value)  row:\(row)  column:\(column)")
-        var totalScore = Int(self.scoreTotals[row])
-        totalScore += value
-        self.scoreTotals[row] = totalScore
+    func totalScores(oldValue: Int, newValue: Int, row: Int, column: Int) {
+        print(oldValue, newValue, row, column)
+        var totalScore = self.scoreTotals[column]
+        if newValue > 0 && oldValue == 0 {
+            totalScore += newValue
+        } else if oldValue > 0 && totalScore >= oldValue {
+            totalScore -= oldValue
+            totalScore += newValue
+        }
+        
+        self.scoreTotals[column] = totalScore
+        print(self.scoreTotals[column], totalScore)
     }
     
     func adjustTotalScores(value: Int, row: Int, column: Int) {
@@ -72,25 +80,9 @@ class CardsManager: ObservableObject {
         
     }
     
-    func sumScores(row: Int, column: Int) {
+    func saveScores(){
         
-        //Compute column-wise sum
-//        for (int i = 0; i < cols; i++) {
-//            int cSum = 0;
-//            for (int j = 0; j < rows; j++) {
-//                cSum += arr[j][i];
-//            }
-//            System.out.println("Column " + (i + 1) + " sum = " + cSum);
-//        }
-        
-    
-        self.scores.forEach {item in
-            print("\(item)")
-            print("column:\(column)")
-            print("row:\(row)")
-            self.scoreTotals[column] += item[column]
-            print("totals: \(self.scoreTotals)")
-        }
     }
+    
     
 }

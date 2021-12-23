@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3503F748266D2C5200F0FDE5 /* ScoreCardPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3503F747266D2C5200F0FDE5 /* ScoreCardPlayersView.swift */; };
 		3503F74A266D2C8900F0FDE5 /* ScoreCardTotalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3503F749266D2C8900F0FDE5 /* ScoreCardTotalsView.swift */; };
+		351A782626EE656A009FF0A1 /* ScoreCardHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351A782526EE656A009FF0A1 /* ScoreCardHistoryView.swift */; };
 		352475E92653F7B300D61178 /* iScoreCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352475E82653F7B300D61178 /* iScoreCardsApp.swift */; };
 		352475EB2653F7B300D61178 /* iScoreCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352475EA2653F7B300D61178 /* iScoreCardsView.swift */; };
 		352475ED2653F7B300D61178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352475EC2653F7B300D61178 /* Assets.xcassets */; };
@@ -21,8 +22,7 @@
 		3524761D2655606D00D61178 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3524761C2655606D00D61178 /* Game.swift */; };
 		352476212658B38C00D61178 /* CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352476202658B38C00D61178 /* CardsManager.swift */; };
 		3524762426594C4B00D61178 /* ScoreCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3524762326594C4B00D61178 /* ScoreCardView.swift */; };
-		3571226626839178006419FD /* URLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571226526839178006419FD /* URLTextField.swift */; };
-		357122692683968F006419FD /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 357122682683968F006419FD /* Introspect */; };
+		358B4E9D2774CDAB00045A61 /* TextFieldHighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B4E9C2774CDAB00045A61 /* TextFieldHighlightView.swift */; };
 		35B2DEDB2697585700A815CB /* ScoreCardRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B2DEDA2697585700A815CB /* ScoreCardRowView.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +46,7 @@
 /* Begin PBXFileReference section */
 		3503F747266D2C5200F0FDE5 /* ScoreCardPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardPlayersView.swift; sourceTree = "<group>"; };
 		3503F749266D2C8900F0FDE5 /* ScoreCardTotalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardTotalsView.swift; sourceTree = "<group>"; };
+		351A782526EE656A009FF0A1 /* ScoreCardHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardHistoryView.swift; sourceTree = "<group>"; };
 		352475E52653F7B300D61178 /* iScoreCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iScoreCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		352475E82653F7B300D61178 /* iScoreCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iScoreCardsApp.swift; sourceTree = "<group>"; };
 		352475EA2653F7B300D61178 /* iScoreCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iScoreCardsView.swift; sourceTree = "<group>"; };
@@ -64,7 +65,7 @@
 		3524761C2655606D00D61178 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		352476202658B38C00D61178 /* CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsManager.swift; sourceTree = "<group>"; };
 		3524762326594C4B00D61178 /* ScoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardView.swift; sourceTree = "<group>"; };
-		3571226526839178006419FD /* URLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTextField.swift; sourceTree = "<group>"; };
+		358B4E9C2774CDAB00045A61 /* TextFieldHighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldHighlightView.swift; sourceTree = "<group>"; };
 		35B2DEDA2697585700A815CB /* ScoreCardRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +74,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				357122692683968F006419FD /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +162,7 @@
 				35247616265402FE00D61178 /* UnregisteredGameSetupView.swift */,
 				352476182654031100D61178 /* SecondTabView.swift */,
 				3524762226594C0100D61178 /* ScoreCardViews */,
+				358B4E9C2774CDAB00045A61 /* TextFieldHighlightView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,8 +189,8 @@
 				3524762326594C4B00D61178 /* ScoreCardView.swift */,
 				3503F747266D2C5200F0FDE5 /* ScoreCardPlayersView.swift */,
 				3503F749266D2C8900F0FDE5 /* ScoreCardTotalsView.swift */,
-				3571226526839178006419FD /* URLTextField.swift */,
 				35B2DEDA2697585700A815CB /* ScoreCardRowView.swift */,
+				351A782526EE656A009FF0A1 /* ScoreCardHistoryView.swift */,
 			);
 			name = ScoreCardViews;
 			sourceTree = "<group>";
@@ -211,7 +212,6 @@
 			);
 			name = iScoreCards;
 			packageProductDependencies = (
-				357122682683968F006419FD /* Introspect */,
 			);
 			productName = iScoreCards;
 			productReference = 352475E52653F7B300D61178 /* iScoreCards.app */;
@@ -334,13 +334,14 @@
 				352475EB2653F7B300D61178 /* iScoreCardsView.swift in Sources */,
 				3524761B26540F4900D61178 /* HomeTabView.swift in Sources */,
 				3503F74A266D2C8900F0FDE5 /* ScoreCardTotalsView.swift in Sources */,
-				3571226626839178006419FD /* URLTextField.swift in Sources */,
 				35B2DEDB2697585700A815CB /* ScoreCardRowView.swift in Sources */,
 				352476212658B38C00D61178 /* CardsManager.swift in Sources */,
 				35247617265402FE00D61178 /* UnregisteredGameSetupView.swift in Sources */,
+				358B4E9D2774CDAB00045A61 /* TextFieldHighlightView.swift in Sources */,
 				352475E92653F7B300D61178 /* iScoreCardsApp.swift in Sources */,
 				3524762426594C4B00D61178 /* ScoreCardView.swift in Sources */,
 				3503F748266D2C5200F0FDE5 /* ScoreCardPlayersView.swift in Sources */,
+				351A782626EE656A009FF0A1 /* ScoreCardHistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,18 +498,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iScoreCards/Preview Content\"";
 				DEVELOPMENT_TEAM = F7TPP9453B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iScoreCards/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikedhaem.iScoreCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -519,18 +522,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iScoreCards/Preview Content\"";
 				DEVELOPMENT_TEAM = F7TPP9453B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iScoreCards/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikedhaem.iScoreCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -671,14 +676,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		357122682683968F006419FD /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 357122672683968F006419FD /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 352475DD2653F7B200D61178 /* Project object */;
 }

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Introspect
+
 
 private class TextFieldObserver: NSObject {
     @objc
@@ -33,40 +33,47 @@ struct ScoreCardRowView: View {
         )
     }
     
+    static var integer: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .none
+        return formatter
+    }
+    
+    @State var oldValue: Int = 0
+    
     var body: some View {
         TextField(
             "0",
             value: $cardsManager.scores[row][column],
-            formatter: ScoreCardView.integer
+            formatter: ScoreCardRowView.integer
         )
-        .introspectTextField { textField in
-            textField.addTarget(
-                self.textFieldObserver,
-                action: #selector(TextFieldObserver.textFieldDidBeginEditing),
-                for: .editingDidBegin
-            )
-        }
-        .onChange(of: cardsManager.scores[column][row]) { value in
-            print(value)
-            cardsManager.totalScores(value: value, row: row, column: column)
-            //cardsManager.sumScores(row: row, column: column)
-        }
-        .onTapGesture(count: 1, perform: {
-            print("Tapped!")
-            let value = cardsManager.scores[column][row]
-            cardsManager.adjustTotalScores(value: value, row: row, column: column)
-        })
-        .fixedSize()
-        .textFieldStyle(RoundedBorderTextFieldStyle())
+            .onReceive(NotificationCenter.default.publisher(for: UITextField.textDidBeginEditingNotification)) { obj in
+                if let textField = obj.object as? UITextField {
+                    textField.selectedTextRange = textField.textRange(from: textField.beginningOfDocument, to: textField.endOfDocument)
+                }
+            }
+            .onSubmit(of: .text) {
+                cardsManager.totalScores(oldValue: oldValue, newValue: cardsManager.scores[row][column], row: row, column: column)
+            }
+            .onTapGesture {
+                print("Tapped!")
+                oldValue = cardsManager.scores[row][column]
+                print(oldValue)
+            }
+            .fixedSize()
+            .textFieldStyle(RoundedBorderTextFieldStyle())
         //.padding(.leading)
-        .padding(EdgeInsets(top: 0, leading: 22, bottom: 0, trailing: 0))
+            .padding(EdgeInsets(top: 0, leading: 22, bottom: 0, trailing: 0))
         Spacer()
     }
+    
 }
 
 struct ScoreCardRowView_Previews: PreviewProvider {
     static var cardsManager = CardsManager(name: "Test", hands: "8", team: "1,2,3,4", scores: [[0,0,0,0], [0,0,0,0],[0,0,0,0], [0,0,0,0]], scoreCardTotals: [0,0,0,0])
     static var previews: some View {
-        ScoreCardRowView(column: 0, row: 1, cardsManager: cardsManager)
+        
+            ScoreCardRowView(column: 0, row: 1, cardsManager: cardsManager)
+        
     }
 }

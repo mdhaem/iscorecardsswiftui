@@ -23,12 +23,12 @@ struct UnregisteredGameSetupView: View {
                     
                     Section(header: Text("enter the number of hands expected in game"))  {
                         TextField("Total number of hands", text: $cardsManager.hands)
-                            .onReceive(Just(cardsManager.hands)) { newValue in
-                                let filtered = newValue.filter { "0123456789".contains($0) }
-                                if filtered != newValue {
-                                    cardsManager.hands = filtered
-                                }
+                        .onReceive(Just(cardsManager.hands)) { newValue in
+                            let filtered = newValue.filter { "0123456789".contains($0) }
+                            if filtered != newValue {
+                                cardsManager.hands = filtered
                             }
+                        }
                     }
                     
                     Section(header: Text("enter players first names separated by a comma")) {
@@ -66,3 +66,4 @@ struct UnregisteredGameSetupView: View {
 //        UnregisteredGameSetupView(cardsManager: cardsManager)
 //    }
 //}
+
